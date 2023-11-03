@@ -16,7 +16,6 @@
 })(jQuery);
 </script>
 
-
 <script>
   (() => {
 'use strict'
@@ -146,7 +145,7 @@ document.querySelector('#navbarSideCollapse').addEventListener('click', () => {
   
   <div class="container-fluid zindex-tooltip">
     <div class="row">
-      <div class="sidebar border border-right col-md-3 col-lg-3 p-0" style="z-index:9999999;">
+      <div class="sidebar border border-right col-md-3 col-lg-3 p-0 position-absolute" style="z-index:9999999;">
         <div class="offcanvas-md offcanvas-end" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="sidebarMenuLabel">Welcome {{currentUser.full_name}}</h5>

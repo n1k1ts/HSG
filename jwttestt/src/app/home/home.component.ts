@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  // Import Router
 import { UserService } from '../_services/user.service';
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   currentUser: any;
   auth: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,  private router: Router) { }
   
 
   ngOnInit(): void {
@@ -29,5 +30,7 @@ export class HomeComponent implements OnInit {
         }
       }
     });
+
+    this.router.navigate(['/profile']);
   }
 }
