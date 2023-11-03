@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.jumbo {
+    padding-top: 100px;
+    min-height: 200vh;
+  }
+  
+  .shrink .navbar {
+    color: #fafafa;
+    background: #00c6ff;
+    background: linear-gradient(35deg, #00c6ff 10%, #0072ff 90%);
+  }

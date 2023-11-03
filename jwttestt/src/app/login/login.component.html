@@ -1,0 +1,58 @@
+<main class="form-signin w-100 m-auto">
+      <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+    <img
+    id="profile-img"
+    [src]="'assets/images/fol_header.png'"
+    class="profile-img-card w-25" />
+        <h1 class="h4 my-3 fw-normal">Please Log In</h1>
+
+        <div class="form-floating">
+          <input placeholder="Username" type="email" id="floatingInput"
+          class="form-control" name="username" [(ngModel)]="form.username"
+          required #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.errors }">
+          <label for="floatingInput">Email address</label>
+          <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+            Username is required!
+          </div>
+        </div>
+        <div class="form-floating">
+          <input  placeholder="Password" type="password" id="floatingPassword" class="form-control"
+          name="password" [(ngModel)]="form.password" required
+          minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }">
+          <label for="floatingPassword">Password</label>
+          <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+            <div *ngIf="password.errors['required']">Password is required</div>
+            <div *ngIf="password.errors['minlength']">
+              Password must be at least 6 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-check text-start my-3">
+          <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-block mt-4">
+            Login
+          </button>
+        </div>
+        <div class="form-group">
+          <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
+            Login failed: {{ errorMessage }}
+          </div>
+        </div>
+
+      <div class="alert alert-success" *ngIf="isLoggedIn">
+        Logged in as {{ roles }}.
+      </div>
+      </form>
+</main>
+<app-footer></app-footer>

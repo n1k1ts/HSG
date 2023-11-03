@@ -1,0 +1,229 @@
+<script>
+    (function($) {
+  $( window ).scroll( function () {
+    if ( $(document).scrollTop() > 300 ) {
+      // Navigation Bar
+      $('.navbar').removeClass('fadeIn');
+      $('body').addClass('shrink');
+      $('.navbar').addClass('fixed-top animated fadeInDown');
+    } else {
+      $('.navbar').removeClass('fadeInDown');
+      $('.navbar').removeClass('fixed-top');
+      $('body').removeClass('shrink');
+      $('.navbar').addClass('animated fadeIn');
+    }
+  });  
+})(jQuery);
+</script>
+
+
+<script>
+  (() => {
+'use strict'
+
+document.querySelector('#navbarSideCollapse').addEventListener('click', () => {
+  document.querySelector('.offcanvas-collapse').classList.toggle('open')
+})
+})()
+
+</script>
+<!-- <nav class="navbar navbar-expand-lg navbar-light position-absolute" style="z-index:9999 !important;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>        
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                What Is HSG Bullion<sup class="supp">®</sup>
+              </a>
+            <ul class="dropdown-menu dropdown-b" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item dropdown-b" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Special Features</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Our HSG Bullion<sup class="supp">®</sup> Medallions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Silver Membership
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Silver Membership</a></li>
+              <li><a class="dropdown-item" href="#">Gold Membership</a></li>
+              <li><a class="dropdown-item" href="#">Platinum Membership</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Our Vision for the Future
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <script>
+    /* globals Chart:false */
+  
+  (() => {
+    'use strict'
+  
+    // Graphs
+    const ctx = document.getElementById('myChart')
+    // eslint-disable-next-line no-unused-vars
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          'Sunday',
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday'
+        ],
+        datasets: [{
+          data: [
+            15339,
+            21345,
+            18483,
+            24003,
+            23489,
+            24092,
+            12034
+          ],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            boxPadding: 3
+          }
+        }
+      }
+    })
+  })()
+  </script>
+  <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+    <ul class="navbar-nav flex-row d-md-none">
+      <li class="nav-item text-nowrap">
+        <button class="nav-link px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" id="modaBtn" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>      
+      </li>
+    </ul>
+  </header>
+  
+  <div class="container-fluid zindex-tooltip">
+    <div class="row">
+      <div class="sidebar border border-right col-md-3 col-lg-3 p-0" style="z-index:9999999;">
+        <div class="offcanvas-md offcanvas-end" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Welcome {{currentUser.full_name}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+          </div>  
+          <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+            <ul class="nav flex-column px-4">
+              <li class="nav-item mb-4">
+                <h6 class="offcanvas-title" id="sidebarMenuLabel">Welcome {{currentUser.full_name}}</h6>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center active" aria-current="page" href="profile">
+                  <svg class="bi"><use xlink:href="#house-fill"/></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" routerLink="profile">
+                  <svg class="bi"><use xlink:href="#file-earmark"/></svg>
+                  Partner with HSG Bullion<sup>®</sup>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" routerLink="board-admin">
+                  <svg class="bi"><use xlink:href="#cart"/></svg>
+                  Shopping Cart
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#people"/></svg>
+                  My Loyalty Account
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#graph-up"/></svg>
+                  HSG Bullion<sup>®</sup> Mentor Program
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#puzzle"/></svg>
+                  Approved Bullion Dealers
+                </a>
+              </li>
+            </ul>
+  
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
+              <span>My Account</span>
+              <a class="link-secondary" href="#" aria-label="Add a new report">
+                <svg class="bi"><use xlink:href="#plus-circle"/></svg>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-auto px-4">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+                  Training Videos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+                  Members Notifications
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+                  My Personal Details
+                </a>
+              </li>
+            </ul>
+            <iframe class="my-3"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

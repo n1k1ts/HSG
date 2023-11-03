@@ -1,0 +1,39 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark px-4">
+    <span class="navbar-brand">
+      <img [src]="'assets/images/logo.png'" width="160">
+    </span>
+    <div style="display: flex;
+    float:right;
+    position:absolute;
+    right:0;">
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home"></a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+    </ul>
+    
+    <ul class="navbar-nav ml-auto px-3" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto px-3" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{username}}</a>
+      </li>
+      <li class="nav-item fs-6">
+        <a href class="nav-link" (click)="logout()">Log out</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+  <div class="w-80 h-10 overflow-x-hidden">
+    <router-outlet></router-outlet>
+  </div>
+</div>
