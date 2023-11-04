@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { Router } from '@angular/router';
+import { StorageService } from '../_services/storage.service';
+import { TokenStorageService } from '../_services/token-storage.service';
+import { SignupService } from '../_services/signup.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +20,7 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private authService: AuthService, private _router: Router) { }
+  constructor(private authService: AuthService, private _router: Router, private storageService: StorageService, private tokenStorageService: TokenStorageService, private signupService: SignupService) { }
 
   ngOnInit(): void {
   }
@@ -43,7 +46,7 @@ export class RegisterComponent implements OnInit {
 onSubmit(): void {
   const { username, email, password } = this.form;
 
-  this.authService.register(username, email, password).subscribe({
+  this.signupService.signUp(username, email, password).subscribe({
     next: data => {
       // this.storageService.saveUser(data);
 
@@ -55,8 +58,8 @@ onSubmit(): void {
       // console.log(data)
       // this._router.navigate(['profile']);
       if(data.status === 'success') {
-        console.log('correct password')
-      this._router.navigate(['profile']);
+        console.log('Account setup request sent!')
+      this._router.navigate(['login']);
       }
       else {
         console.log('signup failed')

@@ -5,6 +5,7 @@ const cookieSession = require("cookie-session");
 const app = express();
 
 app.use(cors());
+app.use('/api',api);
 
 // parse requests of content-type - application/json
 app.use(express.json());
