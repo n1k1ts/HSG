@@ -1,10 +1,10 @@
+
 .contactBtn {
   background-color: #FFAF02;
   box-shadow: 0 6px 10px 0 #5d5d5d;
   transition: all 0.1s ease-in;
   transition-duration: 100ms;
   -webkit-transition-duration: 100ms;
-  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: normal;
   color: white;
@@ -14,7 +14,7 @@
   padding: 10px 20px;
   z-index: 99999;
   border-radius: 5px;
-  bottom: 2em;
+  bottom: 1em;
   right: 2em;
 }
 
@@ -24,7 +24,6 @@
   transition: all 0.1s ease-in-out;
   transition-duration: 100ms;
   -webkit-transition-duration: 100ms;
-  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: white;
   text-align: center;
@@ -284,77 +283,24 @@ font-weight: 600; }
 
 /* :: 11.0 Footer Area CSS */
 .main-footer-area {
-    background-color: #232323; }
-    .main-footer-area .footer-widget .widget-title {
-      margin-bottom: 45px; }
-      .main-footer-area .footer-widget .widget-title h6 {
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 0;
-        color: #ffffff;
-        margin-top: 10px;
-        text-transform: uppercase; }
-    .main-footer-area .footer-widget .footer-social-info {
-      margin-top: 30px;
-      display: block; }
-      .main-footer-area .footer-widget .footer-social-info a {
-        display: inline-block;
-        color: #8e8e8e;
-        margin-right: 25px; }
-        .main-footer-area .footer-widget .footer-social-info a:hover, .main-footer-area .footer-widget .footer-social-info a:focus {
-          color: #ffaf02; }
-    .main-footer-area .footer-widget .single--blog-post {
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 1; }
-      .main-footer-area .footer-widget .single--blog-post:last-child {
-        margin-bottom: 0; }
-      .main-footer-area .footer-widget .single--blog-post a {
-        display: block;
-        color: #8e8e8e;
-        font-family: "Open Sans", sans-serif;
-        margin-bottom: 5px; }
-        .main-footer-area .footer-widget .single--blog-post a:hover {
-          color: #ffaf02; }
-        .main-footer-area .footer-widget .single--blog-post a p {
-          margin-bottom: 0;
-          -webkit-transition-duration: 500ms;
-          transition-duration: 500ms; }
-          .main-footer-area .footer-widget .single--blog-post a p:hover {
-            color: #ffaf02; }
-      .main-footer-area .footer-widget .single--blog-post span {
-        margin-bottom: 0;
-        font-size: 14px;
-        color: #ffaf02; }
-    .main-footer-area .footer-widget .useful-links li {
-      display: inline-block;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
-      width: 50%; }
-      .main-footer-area .footer-widget .useful-links li a {
-        font-size: 14px;
-        font-family: "Open Sans", sans-serif;
-        margin-bottom: 15px;
-        display: block;
-        color: #8e8e8e; }
-        .main-footer-area .footer-widget .useful-links li a:hover, .main-footer-area .footer-widget .useful-links li a:focus {
-          color: #ffaf02; }
-  
+    background-color: #232323;
+    position: inherit;
+   }
+
+
   .bottom-footer-area {
-    background-color: #212529;
+    background-color: #232323;
     height: auto;
     bottom: 0;
-    width: 100vw;
+    width: auto;
     vertical-align: middle;
-    position: relative;
+    position: inherit;
    }
   
     .bottom-footer-area p {
       font-size: 11px;
-      padding: 10px;
-      text-align: center;
+      margin-top:1em;
+      text-align: left;
       color: #fff !important;
       font-family: inherit; }
   

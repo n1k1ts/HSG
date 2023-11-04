@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PartnerComponent } from './partner/partner.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'header', component: HeaderComponent },
+  { path: 'partner', component: PartnerComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'prefix' }
 ];
 

@@ -1,0 +1,77 @@
+.log-btn {
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 11px !important;
+    padding: 0.5em 1em;
+    background: #FFaF02;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #000;
+    margin-top: 2px !important;
+}
+    .log-btn:hover {
+        cursor: pointer !important;
+        background: #fff;
+        font-size: 11px;
+    }
+
+@media screen and (max-width: 420px){
+    .log-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        width: auto;
+        height: auto;
+        border-radius: 4px;
+        background: #FFaF02;
+        color: #000;
+        line-height: 1.2;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .web-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        width: auto;
+        height: 4vh;
+        border-radius: 4px;
+        background: #FFaF02;
+        color: #fff;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+}
+
+.web-btn {
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 11px !important;
+    padding: 0.5em 1em;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid green;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #fff;
+    margin-top: 2px !important;
+}
+    .web-btn:hover {
+        cursor: pointer !important;
+        background: #999;
+        font-size: 11px;
+    }

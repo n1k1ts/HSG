@@ -3,37 +3,39 @@
     <span class="navbar-brand">
       <img [src]="'assets/images/logo.png'" width="160">
     </span>
-    <div style="display: flex;
+    <div style="display: block;position: absolute;
     float:right;
-    position:absolute;
     right:0;">
-    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+    <!-- <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home"></a>
+        <button class="web-btn" type="button">
+          <a href="https://hsgbullion.com/" class="nav-link p-0" target="_blank">HSG Bullion<sup class="mt-2">®</sup>website</a> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right position-inline mx-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+          </svg>
+        </button>
       </li>
       <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
       </li>
     </ul>
-    
+     -->
     <ul class="navbar-nav ml-auto px-3" *ngIf="!isLoggedIn">
-      <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
-      </li>
+      <!-- <li class="nav-item">
+        <a href="/login" class="nav-link log-btn" routerLink="login">Login</a>
+      </li> -->
     </ul>
 
     <ul class="navbar-nav ml-auto px-3" *ngIf="isLoggedIn">
-      <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{username}}</a>
-      </li>
       <li class="nav-item fs-6">
-        <a href class="nav-link" (click)="logout()">Log out</a>
+        <a href class="nav-link log-btn" (click)="logout()">Log out</a>
       </li>
     </ul>
   </div>
   </nav>
 
-  <div class="w-80 h-10 overflow-x-hidden">
-    <router-outlet></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
+  
+  <app-footer></app-footer>
 </div>

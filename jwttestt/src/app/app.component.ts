@@ -2,17 +2,25 @@ import { Component } from '@angular/core';
 import { StorageService } from './_services/storage.service';
 import { AuthService } from './_services/auth.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'HSG Bullion';
   private roles: string[] = [];
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
+
+  //++
+  [x: string]: any;
+  currentUser: any;
+  auth: any;
+
 
   get isLoggedIn() {
     return this.storageService.isLoggedIn();
@@ -29,7 +37,10 @@ export class AppComponent {
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
 
       this.username = currentUser.username;
-    }
+    
+    this.currentUser = this.storageService.getUser();
+    console.log(this.currentUser)
+  }
   }
 
   logout(): void {
@@ -46,3 +57,4 @@ export class AppComponent {
     });
   }
 }
+

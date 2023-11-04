@@ -1,23 +1,89 @@
 <app-header></app-header>
-<main class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
-  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Welcome to HSG Bullion<sup>®</sup></h1>
+  <div class="row">
+    <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4 p-5 position-relative" style="right:0;float:right;">
+      <div class="container mb-3" style="z-index:100001 !important;position:absolute;top:2em;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+              </svg>
+              <span class="visually-hidden">Home</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <span class="h7">Profile</span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Welcome to HSG Bullion<sup>®</sup></h1>
+    </div>
+    <div class="">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dignissimos iure deserunt provident alias nemo nesciunt quibusdam quis voluptatibus aspernatur ad est mollitia beatae perspiciatis rerum atque temporibus! Optio, modi.
+        <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati cupiditate laboriosam repellendus quaerat. Mollitia dolorem ab, alias odit iste, nobis ullam doloribus ex deserunt impedit minus est suscipit consequatur.
+      </p>
+      <h3 class="my-4">Membership</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dignissimos iure deserunt provident alias nemo nesciunt quibusdam quis voluptatibus aspernatur ad est mollitia beatae perspiciatis rerum atque temporibus! Optio, modi.
+      </p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Silver</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">11<small class="text-body-secondary fs-6 fw-light">~LP</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Medallions: </li>
+              <li>Value: </li>
+              <li>Loyalty Points: </li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-secondary">Silver Account</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 bg-success-emphasis shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Gold</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">3<small class="text-body-secondary fs-6 fw-light">~LP</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Medallions: </li>
+              <li>Value: </li>
+              <li>Loyalty Points: </li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-warning">Gold Account</button>
+          </div>
+        </div>
+      </div>
+      <div class="col disable">
+        <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+          <div class="card-header py-3 text-bg-secondary border-secondary">
+            <h4 class="my-0 fw-normal">Platinum</h4>
+          </div>
+          <div class="card-body text-bg-secondary ">
+            <h1 class="card-title pricing-card-title">2<small class="text-body-secondary fs-6 fw-light">~LP</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Medallions: </li>
+              <li>Value: </li>
+              <li>Loyalty Points: </li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-success">Enquire</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
   </div>
-  <div class="">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dignissimos iure deserunt provident alias nemo nesciunt quibusdam quis voluptatibus aspernatur ad est mollitia beatae perspiciatis rerum atque temporibus! Optio, modi.
-      <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati cupiditate laboriosam repellendus quaerat. Mollitia dolorem ab, alias odit iste, nobis ullam doloribus ex deserunt impedit minus est suscipit consequatur.
-    </p>
-    <ul class="navbar-nav ml-auto px-3">
-      <li class="nav-item">
-        <a href="profile" class="nav-link fs-2 dark">{{currentUser.full_name}}</a>
-      </li>
-    </ul>
-  </div>
-
-</main>
-<div class="b-example-divider b-example-vr"></div>
-
 <ng-template #loggedOut>
   Please login.
 </ng-template>

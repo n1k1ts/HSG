@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { PartnerComponent } from './partner/partner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PartnerComponent
   ],
   imports: [
     BrowserModule,
